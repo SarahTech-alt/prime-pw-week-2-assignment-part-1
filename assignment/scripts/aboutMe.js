@@ -64,28 +64,29 @@
 // assigns the highest value to `mostPets`. There's several possibilities --
 // be sure to think through all the scenarios.
 // console.log `mostPets` after the conditional has run.
-let mostPets =  "";
 
-if (pets < friendsPets) {
+//first approach
+
+let mostPets;
+
+if (pets <= friendsPets) {
   mostPets = friendsPets;
 } else if (pets > friendsPets ) {
     mostPets = pets;
-} else {
-  mostPets = pets;
 }
 console.log(mostPets);
+
+//16 - approach two
 
 let evenMorePets = Math.max(pets,friendsPets);
 console.log(evenMorePets);
 
-//let mostPets = Math.max(pets,friendsPets);
 
-//console.log(mostPets);
 
 // 17 - Rewrite question 16 with a `switch` statement. You'll need to do research!
 
 switch (true) {
-  case pets>friendsPets:
+  case pets>=friendsPets:
     console.log(pets);
     break;
   case pets<friendsPets:
@@ -95,6 +96,11 @@ switch (true) {
     console.log(pets);
 }
 
+// 17 - appraoch two
+
+var theMost = (pets >= friendsPets) ? pets : friendsPets;
+
+console.log(theMost);
 
 
 // 18 -- Rewrite question 13 with a `ternary` operator. You'll need to do research!
